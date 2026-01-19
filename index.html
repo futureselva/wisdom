@@ -3,404 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Historical quotes translated into your native language. Wisdom without borders for every nation.">
-    <meta name="keywords" content="quotes, historical quotes, translations, wisdom, shakespeare, multilingual">
-    <meta name="author" content="Wisdom Without Borders">
+    <meta name="description" content="Ancient wisdom in your language. Timeless quotes from Thiruvalluvar translated into 10 languages.">
 
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Wisdom Without Borders - Historical Quotes in Your Language">
-    <meta property="og:description" content="Great wisdom transcends time and place. Historical quotes translated for every nation.">
+    <title>Wisdom Without Borders</title>
 
-    <title>Wisdom Without Borders - Historical Quotes in Your Language</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📜</text></svg>">
-
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:wght@600;700;900&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome for Icons -->
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Custom Reaction Icons -->
-    <link rel="preload" href="reaction-icons.svg" as="image">
-
-    <!-- Google Analytics (Replace YOUR_GA_ID with your actual Google Analytics ID) -->
-    <!-- Uncomment when you have your GA ID
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'YOUR_GA_ID');
-    </script>
-    -->
 </head>
 <body>
-    <!-- Language Selector -->
-    <div class="language-selector">
-        <button class="lang-btn" id="langBtn">
-            <i class="fas fa-globe"></i>
-            <span id="currentLang">EN</span>
-            <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="lang-dropdown" id="langDropdown">
-            <button class="lang-option" data-lang="en">🇬🇧 English</button>
-            <button class="lang-option" data-lang="es">🇪🇸 Español</button>
-            <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
-            <button class="lang-option" data-lang="de">🇩🇪 Deutsch</button>
-            <button class="lang-option" data-lang="it">🇮🇹 Italiano</button>
-            <button class="lang-option" data-lang="pt">🇵🇹 Português</button>
-            <button class="lang-option" data-lang="ja">🇯🇵 日本語</button>
-            <button class="lang-option" data-lang="zh">🇨🇳 中文</button>
-        </div>
-    </div>
 
-    <!-- Logo Header -->
-    <div class="logo-header">
-        <img src="logo.svg" alt="Wisdom Without Borders Logo" class="site-logo">
-        <span class="logo-text">Wisdom Without Borders</span>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-background"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title" data-translate="hero-title">
-                    Linking wisdom across cultures
-                </h1>
-                <p class="hero-subtitle" data-translate="hero-subtitle">
-                    Historical quotes in your language, for your culture
-                </p>
-
-                <!-- Quote Language Selector with Flags -->
-                <div class="quote-language-selector">
-                    <p class="selector-label">Read quotes in:</p>
-                    <div class="flag-selector">
-                        <button class="flag-btn active" data-lang-code="ta" title="Tamil">🇮🇳</button>
-                        <button class="flag-btn" data-lang-code="es" title="Spanish">🇪🇸</button>
-                        <button class="flag-btn" data-lang-code="fr" title="French">🇫🇷</button>
-                        <button class="flag-btn" data-lang-code="de" title="German">🇩🇪</button>
-                        <button class="flag-btn" data-lang-code="it" title="Italian">🇮🇹</button>
-                        <button class="flag-btn" data-lang-code="pt" title="Portuguese">🇵🇹</button>
-                        <button class="flag-btn" data-lang-code="ja" title="Japanese">🇯🇵</button>
-                        <button class="flag-btn" data-lang-code="zh" title="Chinese">🇨🇳</button>
-                        <button class="flag-btn" data-lang-code="hi" title="Hindi">🇮🇳</button>
-                        <button class="flag-btn" data-lang-code="ar" title="Arabic">🇸🇦</button>
-                    </div>
-                </div>
-
-                <!-- Featured Quote in Hero -->
-                <div class="hero-quote" id="heroQuote">
-                    <div class="hero-quote-text" id="heroQuoteText">
-                        "Essere o non essere, questo è il problema."
-                    </div>
-                    <div class="hero-quote-author" id="heroQuoteAuthor">
-                        — Shakespeare 🇮🇹
-                    </div>
-                    <button class="hero-translate-btn" id="heroTranslateBtn">
-                        <i class="fas fa-language"></i>
-                        <span data-translate="see-translation">See English Translation</span>
-                    </button>
-                    <div class="hero-quote-translation" id="heroQuoteTranslation" style="display: none;">
-                        "To be or not to be, that is the question."
-                    </div>
-                </div>
-
-                <div class="hero-cta">
-                    <a href="#newsletter" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i>
-                        <span data-translate="get-daily-wisdom">Get Daily Wisdom</span>
-                    </a>
-                    <a href="#gallery" class="btn btn-secondary">
-                        <i class="fas fa-images"></i>
-                        <span data-translate="explore-quotes">Explore Quotes</span>
-                    </a>
-                </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32">
+                    <circle cx="16" cy="16" r="15" fill="url(#navGradient)"/>
+                    <path d="M 10 13 Q 16 11 22 13 L 22 21 Q 16 19 10 21 Z" fill="white" opacity="0.9"/>
+                    <defs>
+                        <linearGradient id="navGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#667eea"/>
+                            <stop offset="100%" style="stop-color:#764ba2"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>Wisdom</span>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
 
-    <!-- Side Menu -->
-    <div class="side-menu" id="sideMenu">
-        <button class="side-menu-toggle" id="sideMenuToggle">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="side-menu-content" id="sideMenuContent">
-            <h3 class="side-menu-title">Explore</h3>
-            <button class="side-menu-item active" data-filter="all">
-                <i class="fas fa-home"></i>
-                <span>All Quotes</span>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
             </button>
-            <button class="side-menu-item" data-filter="trending">
+        </div>
+    </nav>
+
+    <!-- Side Panel -->
+    <aside class="side-panel" id="sidePanel">
+        <div class="side-panel-content">
+            <button class="close-panel" id="closePanel">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <h3>Explore</h3>
+            <button class="panel-item active" data-filter="all">
+                <i class="fas fa-compass"></i>
+                All Quotes
+            </button>
+            <button class="panel-item" data-filter="trending">
                 <i class="fas fa-fire"></i>
-                <span>Trending Now</span>
+                Trending
             </button>
-            <button class="side-menu-item" data-filter="top-liked">
+            <button class="panel-item" data-filter="loved">
                 <i class="fas fa-heart"></i>
-                <span>Most Loved</span>
-            </button>
-            <button class="side-menu-item" data-filter="recent">
-                <i class="fas fa-clock"></i>
-                <span>Recently Added</span>
+                Most Loved
             </button>
         </div>
-    </div>
+    </aside>
 
-    <!-- Quote of the Day -->
-    <section class="quote-of-day">
-        <div class="container">
-            <h2 class="section-title" data-translate="quote-of-day">Quote of the Day</h2>
-            <div class="quote-card" id="quoteCard">
-                <div class="quote-icon">
-                    <i class="fas fa-quote-left"></i>
-                </div>
-                <blockquote class="quote-text" id="quoteText">
-                    Loading quote...
-                </blockquote>
-                <div class="quote-author" id="quoteAuthor">
-                    —
-                </div>
-                <div class="quote-meta" id="quoteMeta">
-                    <span class="quote-language" id="quoteLanguage"></span>
-                    <span class="quote-country" id="quoteCountry"></span>
-                </div>
-                <button class="quote-translate-btn" id="quoteTranslateBtn">
-                    <i class="fas fa-language"></i>
-                    <span data-translate="see-translation">See English Translation</span>
-                </button>
-                <div class="quote-translation" id="quoteTranslation" style="display: none;">
-                    Translation will appear here
-                </div>
+    <!-- Main Content -->
+    <main class="main-content">
 
-                <!-- Quote Explanation -->
-                <div class="quote-explanation-section">
-                    <button class="explanation-toggle" id="explanationToggle">
-                        <i class="fas fa-lightbulb"></i>
-                        <span>Why This Matters</span>
-                        <i class="fas fa-chevron-down toggle-icon"></i>
-                    </button>
-                    <div class="quote-explanation" id="quoteExplanation" style="display: none;">
-                        Explanation will appear here
-                    </div>
-                </div>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Wisdom Without Borders</h1>
+                <p class="hero-subtitle">Ancient knowledge. Your language.</p>
 
-                <!-- Reactions System -->
-                <div class="reactions-container">
-                    <div class="reactions-title">How does this hit?</div>
-                    <div class="reactions-grid">
-                        <button class="reaction-btn" data-reaction="enlightened" title="Yo this hit different">
-                            <svg class="reaction-icon"><use href="reaction-icons.svg#icon-enlightened"/></svg>
-                            <span class="reaction-label">Enlightened</span>
-                            <span class="reaction-count" id="count-enlightened">0</span>
-                        </button>
-                        <button class="reaction-btn" data-reaction="moved" title="Right in the feels">
-                            <svg class="reaction-icon"><use href="reaction-icons.svg#icon-moved"/></svg>
-                            <span class="reaction-label">Moved</span>
-                            <span class="reaction-count" id="count-moved">0</span>
-                        </button>
-                        <button class="reaction-btn" data-reaction="empowered" title="Let's goooo">
-                            <svg class="reaction-icon"><use href="reaction-icons.svg#icon-empowered"/></svg>
-                            <span class="reaction-label">Empowered</span>
-                            <span class="reaction-count" id="count-empowered">0</span>
-                        </button>
-                        <button class="reaction-btn" data-reaction="saved" title="I needed this today">
-                            <svg class="reaction-icon"><use href="reaction-icons.svg#icon-saved"/></svg>
-                            <span class="reaction-label">Saved Me</span>
-                            <span class="reaction-count" id="count-saved">0</span>
-                        </button>
-                        <button class="reaction-btn" data-reaction="facts" title="No cap, pure truth">
-                            <svg class="reaction-icon"><use href="reaction-icons.svg#icon-facts"/></svg>
-                            <span class="reaction-label">Facts</span>
-                            <span class="reaction-count" id="count-facts">0</span>
-                        </button>
-                    </div>
-                    <div class="user-reaction-status" id="userReactionStatus" style="display: none;">
-                        You reacted with <span id="userReactionEmoji"></span>
-                    </div>
-                </div>
-
-                <button class="btn-refresh" id="refreshQuote" title="Get another quote">
-                    <i class="fas fa-sync-alt"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <div class="about-content">
-                <h2 class="section-title" data-translate="our-mission">Our Mission</h2>
-                <p class="about-text" data-translate="mission-text">
-                    Great wisdom transcends time and place. We're bringing the world's most profound
-                    historical quotes to every nation, translated into their native languages. From
-                    Shakespeare in Italian to Confucius in Portuguese, from Rumi in Japanese to Gandhi
-                    in French—wisdom speaks louder when it speaks your language.
-                </p>
-                <div class="stats">
-                    <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label" data-translate="languages">Languages</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">1000+</div>
-                        <div class="stat-label" data-translate="quotes">Quotes</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100+</div>
-                        <div class="stat-label" data-translate="authors">Authors</div>
-                    </div>
+                <!-- Language Selector -->
+                <div class="language-grid">
+                    <button class="lang-flag active" data-lang="ta" title="Tamil">🇮🇳</button>
+                    <button class="lang-flag" data-lang="es" title="Spanish">🇪🇸</button>
+                    <button class="lang-flag" data-lang="fr" title="French">🇫🇷</button>
+                    <button class="lang-flag" data-lang="de" title="German">🇩🇪</button>
+                    <button class="lang-flag" data-lang="it" title="Italian">🇮🇹</button>
+                    <button class="lang-flag" data-lang="pt" title="Portuguese">🇵🇹</button>
+                    <button class="lang-flag" data-lang="ja" title="Japanese">🇯🇵</button>
+                    <button class="lang-flag" data-lang="zh" title="Chinese">🇨🇳</button>
+                    <button class="lang-flag" data-lang="hi" title="Hindi">🇮🇳</button>
+                    <button class="lang-flag" data-lang="ar" title="Arabic">🇸🇦</button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Quote Gallery -->
-    <section class="gallery" id="gallery">
-        <div class="container">
-            <h2 class="section-title" data-translate="quote-gallery">Quote Gallery</h2>
-            <p class="section-subtitle" data-translate="gallery-subtitle">
-                Explore wisdom from around the world, translated for every culture
-            </p>
-            <div class="gallery-grid" id="galleryGrid">
-                <!-- Gallery items will be dynamically inserted here -->
-            </div>
-        </div>
-    </section>
+        <!-- Main Quote Card -->
+        <section class="quote-section">
+            <div class="container">
 
-    <!-- Newsletter Section -->
-    <section class="newsletter" id="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2 class="section-title" data-translate="stay-inspired">Stay Inspired Daily</h2>
-                <p class="newsletter-subtitle" data-translate="newsletter-subtitle">
-                    Get a historical quote in your language delivered to your inbox every day
-                </p>
-                <form class="newsletter-form" id="newsletterForm">
-                    <div class="form-group">
-                        <input
-                            type="email"
-                            id="emailInput"
-                            class="form-input"
-                            placeholder="Enter your email"
-                            data-translate-placeholder="email-placeholder"
-                            required
-                        >
-                        <select id="languageSelect" class="form-select">
-                            <option value="en">English</option>
-                            <option value="es">Español</option>
-                            <option value="fr">Français</option>
-                            <option value="de">Deutsch</option>
-                            <option value="it">Italiano</option>
-                            <option value="pt">Português</option>
-                            <option value="ja">日本語</option>
-                            <option value="zh">中文</option>
-                        </select>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i>
-                            <span data-translate="subscribe">Subscribe</span>
+                <article class="quote-card" id="quoteCard">
+                    <div class="quote-body">
+                        <blockquote class="quote-text" id="quoteText">
+                            Loading wisdom...
+                        </blockquote>
+
+                        <div class="quote-author" id="quoteAuthor">
+                            — Thiruvalluvar
+                        </div>
+
+                        <div class="quote-meta">
+                            <span id="quoteLang"></span>
+                            <button class="translate-btn" id="translateBtn">
+                                <i class="fas fa-language"></i>
+                                Show translation
+                            </button>
+                        </div>
+
+                        <div class="quote-translation" id="quoteTranslation" style="display: none;">
+                            Translation text
+                        </div>
+                    </div>
+
+                    <!-- Explanation -->
+                    <div class="explanation-section">
+                        <button class="explanation-btn" id="explanationBtn">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>What this means</span>
+                            <i class="fas fa-chevron-down arrow"></i>
                         </button>
+                        <div class="explanation-content" id="explanationContent" style="display: none;">
+                            Explanation text
+                        </div>
                     </div>
-                    <div class="form-message" id="formMessage"></div>
-                </form>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title" data-translate="get-in-touch">Get in Touch</h2>
-            <p class="section-subtitle" data-translate="contact-subtitle">
-                Have a suggestion or want to contribute? We'd love to hear from you!
-            </p>
-            <form class="contact-form" id="contactForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <input
-                            type="text"
-                            id="nameInput"
-                            class="form-input"
-                            placeholder="Your Name"
-                            data-translate-placeholder="name-placeholder"
-                            required
-                        >
+                    <!-- Reactions -->
+                    <div class="reactions-section">
+                        <p class="reactions-label">How does this resonate?</p>
+                        <div class="reactions-row">
+                            <button class="reaction" data-reaction="enlightened" title="Enlightened">
+                                <svg class="reaction-svg"><use href="reaction-icons.svg#icon-enlightened"/></svg>
+                                <span class="reaction-name">Enlightened</span>
+                                <span class="reaction-count" id="count-enlightened">0</span>
+                            </button>
+                            <button class="reaction" data-reaction="moved" title="Moved">
+                                <svg class="reaction-svg"><use href="reaction-icons.svg#icon-moved"/></svg>
+                                <span class="reaction-name">Moved</span>
+                                <span class="reaction-count" id="count-moved">0</span>
+                            </button>
+                            <button class="reaction" data-reaction="empowered" title="Empowered">
+                                <svg class="reaction-svg"><use href="reaction-icons.svg#icon-empowered"/></svg>
+                                <span class="reaction-name">Empowered</span>
+                                <span class="reaction-count" id="count-empowered">0</span>
+                            </button>
+                            <button class="reaction" data-reaction="saved" title="Saved Me">
+                                <svg class="reaction-svg"><use href="reaction-icons.svg#icon-saved"/></svg>
+                                <span class="reaction-name">Saved</span>
+                                <span class="reaction-count" id="count-saved">0</span>
+                            </button>
+                            <button class="reaction" data-reaction="facts" title="Facts">
+                                <svg class="reaction-svg"><use href="reaction-icons.svg#icon-facts"/></svg>
+                                <span class="reaction-name">Facts</span>
+                                <span class="reaction-count" id="count-facts">0</span>
+                            </button>
+                        </div>
+                        <p class="user-reaction" id="userReaction" style="display: none;"></p>
                     </div>
-                    <div class="form-group">
-                        <input
-                            type="email"
-                            id="contactEmail"
-                            class="form-input"
-                            placeholder="Your Email"
-                            data-translate-placeholder="email-placeholder"
-                            required
-                        >
-                    </div>
-                </div>
-                <div class="form-group">
-                    <textarea
-                        id="messageInput"
-                        class="form-textarea"
-                        placeholder="Your Message"
-                        data-translate-placeholder="message-placeholder"
-                        rows="5"
-                        required
-                    ></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i>
-                    <span data-translate="send-message">Send Message</span>
-                </button>
-                <div class="form-message" id="contactMessage"></div>
-            </form>
-        </div>
-    </section>
+                </article>
 
-    <!-- Social Media Section -->
-    <section class="social">
-        <div class="container">
-            <h3 class="social-title" data-translate="follow-us">Follow Our Journey</h3>
-            <div class="social-links">
-                <a href="https://twitter.com/yourhandle" class="social-link twitter" target="_blank" rel="noopener" title="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://instagram.com/yourhandle" class="social-link instagram" target="_blank" rel="noopener" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://facebook.com/yourpage" class="social-link facebook" target="_blank" rel="noopener" title="Facebook">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://linkedin.com/company/yourcompany" class="social-link linkedin" target="_blank" rel="noopener" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://youtube.com/@yourchannel" class="social-link youtube" target="_blank" rel="noopener" title="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
+                <!-- More Quotes Gallery -->
+                <section class="gallery-section">
+                    <h2 class="section-title">More Wisdom</h2>
+                    <div class="gallery-grid" id="galleryGrid">
+                        <!-- Gallery items loaded by JS -->
+                    </div>
+                </section>
+
             </div>
-        </div>
-    </section>
+        </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Wisdom Without Borders. <span data-translate="footer-text">Spreading wisdom across all nations.</span></p>
+            <p>&copy; 2026 Wisdom Without Borders. Ancient wisdom for modern times.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/translations.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/script.js"></script>
+
 </body>
 </html>
