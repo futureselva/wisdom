@@ -28,6 +28,9 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Custom Reaction Icons -->
+    <link rel="preload" href="reaction-icons.svg" as="image">
+
     <!-- Google Analytics (Replace YOUR_GA_ID with your actual Google Analytics ID) -->
     <!-- Uncomment when you have your GA ID
     <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
@@ -59,14 +62,19 @@
         </div>
     </div>
 
+    <!-- Logo Header -->
+    <div class="logo-header">
+        <img src="logo.svg" alt="Wisdom Without Borders Logo" class="site-logo">
+        <span class="logo-text">Wisdom Without Borders</span>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-background"></div>
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title" data-translate="hero-title">
-                    <span class="emoji-large">📜</span>
-                    Wisdom Without Borders
+                    Linking wisdom across cultures
                 </h1>
                 <p class="hero-subtitle" data-translate="hero-subtitle">
                     Historical quotes in your language, for your culture
@@ -123,6 +131,32 @@
         </div>
     </section>
 
+    <!-- Side Menu -->
+    <div class="side-menu" id="sideMenu">
+        <button class="side-menu-toggle" id="sideMenuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="side-menu-content" id="sideMenuContent">
+            <h3 class="side-menu-title">Explore</h3>
+            <button class="side-menu-item active" data-filter="all">
+                <i class="fas fa-home"></i>
+                <span>All Quotes</span>
+            </button>
+            <button class="side-menu-item" data-filter="trending">
+                <i class="fas fa-fire"></i>
+                <span>Trending Now</span>
+            </button>
+            <button class="side-menu-item" data-filter="top-liked">
+                <i class="fas fa-heart"></i>
+                <span>Most Loved</span>
+            </button>
+            <button class="side-menu-item" data-filter="recent">
+                <i class="fas fa-clock"></i>
+                <span>Recently Added</span>
+            </button>
+        </div>
+    </div>
+
     <!-- Quote of the Day -->
     <section class="quote-of-day">
         <div class="container">
@@ -166,27 +200,27 @@
                     <div class="reactions-title">How does this hit?</div>
                     <div class="reactions-grid">
                         <button class="reaction-btn" data-reaction="enlightened" title="Yo this hit different">
-                            <span class="reaction-emoji">💡</span>
+                            <svg class="reaction-icon"><use href="reaction-icons.svg#icon-enlightened"/></svg>
                             <span class="reaction-label">Enlightened</span>
                             <span class="reaction-count" id="count-enlightened">0</span>
                         </button>
                         <button class="reaction-btn" data-reaction="moved" title="Right in the feels">
-                            <span class="reaction-emoji">❤️</span>
+                            <svg class="reaction-icon"><use href="reaction-icons.svg#icon-moved"/></svg>
                             <span class="reaction-label">Moved</span>
                             <span class="reaction-count" id="count-moved">0</span>
                         </button>
                         <button class="reaction-btn" data-reaction="empowered" title="Let's goooo">
-                            <span class="reaction-emoji">💪</span>
+                            <svg class="reaction-icon"><use href="reaction-icons.svg#icon-empowered"/></svg>
                             <span class="reaction-label">Empowered</span>
                             <span class="reaction-count" id="count-empowered">0</span>
                         </button>
                         <button class="reaction-btn" data-reaction="saved" title="I needed this today">
-                            <span class="reaction-emoji">🙏</span>
+                            <svg class="reaction-icon"><use href="reaction-icons.svg#icon-saved"/></svg>
                             <span class="reaction-label">Saved Me</span>
                             <span class="reaction-count" id="count-saved">0</span>
                         </button>
                         <button class="reaction-btn" data-reaction="facts" title="No cap, pure truth">
-                            <span class="reaction-emoji">🔥</span>
+                            <svg class="reaction-icon"><use href="reaction-icons.svg#icon-facts"/></svg>
                             <span class="reaction-label">Facts</span>
                             <span class="reaction-count" id="count-facts">0</span>
                         </button>

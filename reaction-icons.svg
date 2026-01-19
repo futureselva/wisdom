@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <defs>
+    <!-- Enlightened Icon - Brain with lightbulb -->
+    <symbol id="icon-enlightened" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" fill="#FEF3C7" stroke="#F59E0B" stroke-width="3"/>
+      <!-- Lightbulb -->
+      <path d="M 50 20 L 50 35" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="50" cy="45" r="12" fill="#FBBF24" stroke="#F59E0B" stroke-width="2"/>
+      <rect x="45" y="53" width="10" height="6" rx="2" fill="#F59E0B"/>
+      <!-- Sparkles -->
+      <circle cx="30" cy="30" r="2" fill="#F59E0B"/>
+      <circle cx="70" cy="30" r="2" fill="#F59E0B"/>
+      <circle cx="35" cy="65" r="2" fill="#F59E0B"/>
+      <circle cx="65" cy="65" r="2" fill="#F59E0B"/>
+    </symbol>
+
+    <!-- Moved Icon - Heart with motion lines -->
+    <symbol id="icon-moved" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" fill="#FCE7F3" stroke="#EC4899" stroke-width="3"/>
+      <!-- Heart -->
+      <path d="M 50 65 C 35 55, 30 45, 35 35 C 40 25, 50 30, 50 30 C 50 30, 60 25, 65 35 C 70 45, 65 55, 50 65 Z"
+            fill="#EC4899"/>
+      <!-- Motion lines -->
+      <path d="M 20 40 Q 22 42, 24 40" stroke="#EC4899" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M 76 40 Q 78 42, 80 40" stroke="#EC4899" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M 25 55 Q 27 57, 29 55" stroke="#EC4899" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M 71 55 Q 73 57, 75 55" stroke="#EC4899" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- Empowered Icon - Flexed muscle arm -->
+    <symbol id="icon-empowered" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" fill="#DBEAFE" stroke="#3B82F6" stroke-width="3"/>
+      <!-- Muscle arm -->
+      <path d="M 30 60 Q 30 45, 40 40 Q 45 38, 50 40 L 55 50 Q 60 55, 65 50 Q 68 45, 70 50 L 75 60 Q 75 65, 70 70 L 30 70 Q 25 65, 30 60 Z"
+            fill="#3B82F6"/>
+      <!-- Power lines -->
+      <path d="M 20 35 L 25 40" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 20 45 L 27 48" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 75 35 L 80 40" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 73 45 L 80 48" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- Saved Me Icon - Life preserver / helping hand -->
+    <symbol id="icon-saved" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" fill="#D1FAE5" stroke="#10B981" stroke-width="3"/>
+      <!-- Hands reaching -->
+      <path d="M 40 30 L 40 45 L 35 50 L 30 48 L 32 43 L 37 45 L 37 30"
+            fill="#10B981" stroke="#059669" stroke-width="1.5"/>
+      <path d="M 60 50 L 60 35 L 65 30 L 70 32 L 68 37 L 63 35 L 63 50"
+            fill="#10B981" stroke="#059669" stroke-width="1.5"/>
+      <!-- Connection/lifeline -->
+      <path d="M 40 50 Q 50 45, 60 50" stroke="#059669" stroke-width="2" fill="none"/>
+      <!-- Safety circle -->
+      <circle cx="50" cy="60" r="8" fill="none" stroke="#10B981" stroke-width="2"/>
+      <circle cx="45" cy="60" r="2" fill="#10B981"/>
+      <circle cx="55" cy="60" r="2" fill="#10B981"/>
+    </symbol>
+
+    <!-- Facts Icon - Stamp / verified badge -->
+    <symbol id="icon-facts" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" fill="#FEE2E2" stroke="#EF4444" stroke-width="3"/>
+      <!-- Badge/Stamp shape -->
+      <path d="M 50 25 L 60 35 L 75 35 L 65 45 L 70 60 L 50 50 L 30 60 L 35 45 L 25 35 L 40 35 Z"
+            fill="#EF4444"/>
+      <!-- Checkmark in center -->
+      <path d="M 42 47 L 48 53 L 60 41" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Exclamation marks -->
+      <text x="22" y="75" font-size="16" font-weight="bold" fill="#EF4444">!</text>
+      <text x="72" y="75" font-size="16" font-weight="bold" fill="#EF4444">!</text>
+    </symbol>
+  </defs>
+</svg>

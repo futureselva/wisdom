@@ -4,6 +4,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     initializeLanguageSelector();
     initializeFlagSelector();
+    initializeSideMenu();
     loadHeroQuote();
     loadQuoteOfTheDay();
     initializeGallery();
@@ -70,6 +71,53 @@ function initializeFlagSelector() {
             loadQuoteOfTheDay();
             initializeGallery();
         });
+    });
+}
+
+// ===== SIDE MENU =====
+function initializeSideMenu() {
+    const sideMenuToggle = document.getElementById('sideMenuToggle');
+    const sideMenuContent = document.getElementById('sideMenuContent');
+    const sideMenuItems = document.querySelectorAll('.side-menu-item');
+
+    // Toggle menu
+    if (sideMenuToggle) {
+        sideMenuToggle.addEventListener('click', () => {
+            sideMenuContent.classList.toggle('active');
+        });
+    }
+
+    // Handle menu item clicks
+    sideMenuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Remove active from all
+            sideMenuItems.forEach(i => i.classList.remove('active'));
+            // Add active to clicked
+            item.classList.add('active');
+
+            const filter = item.getAttribute('data-filter');
+            filterQuotes(filter);
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.side-menu')) {
+            sideMenuContent.classList.remove('active');
+        }
+    });
+}
+
+function filterQuotes(filter) {
+    // For now, just reload gallery
+    // In future, implement actual filtering logic
+    console.log('Filter selected:', filter);
+    initializeGallery();
+
+    // Scroll to gallery
+    document.querySelector('.gallery').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
     });
 }
 
