@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" id="metaDescription" content="Explore ancient wisdom quotes about this topic from great philosophers.">
+    <meta name="keywords" id="metaKeywords" content="">
+
+    <title id="pageTitle">Topic | Wisdom Without Borders</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:wght@600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .topic-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px 60px;
+            text-align: center;
+            color: white;
+        }
+
+        .topic-hero-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .topic-hero h1 {
+            font-family: 'Fraunces', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 16px;
+        }
+
+        .topic-hero p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+
+        .topic-meta {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 24px;
+            font-size: 0.875rem;
+        }
+
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            font-size: 0.875rem;
+            color: #4a5568;
+        }
+
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .quotes-list {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .quote-item {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .quote-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+
+        .quote-text {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a202c;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .quote-author {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 16px;
+            font-size: 1.125rem;
+        }
+
+        .quote-explanation {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 12px;
+        }
+
+        .quote-modern {
+            color: #2d3748;
+            font-weight: 500;
+            padding-left: 20px;
+            border-left: 4px solid #667eea;
+            font-style: italic;
+        }
+
+        .quote-actions {
+            margin-top: 24px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .quote-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #f7fafc;
+            color: #667eea;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.875rem;
+        }
+
+        .quote-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .related-topics {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .related-topics h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #1a202c;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .related-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .related-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .related-title {
+            font-weight: 600;
+            color: #1a202c;
+        }
+
+        @media (max-width: 768px) {
+            .topic-hero h1 {
+                font-size: 2rem;
+            }
+
+            .quote-item {
+                padding: 24px;
+            }
+
+            .quote-text {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit;">
+                    <svg width="32" height="32" viewBox="0 0 32 32">
+                        <circle cx="16" cy="16" r="15" fill="url(#navGradient)"/>
+                        <path d="M 10 13 Q 16 11 22 13 L 22 21 Q 16 19 10 21 Z" fill="white" opacity="0.9"/>
+                        <defs>
+                            <linearGradient id="navGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#667eea"/>
+                                <stop offset="100%" style="stop-color:#764ba2"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span>Wisdom</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Side Panel -->
+    <aside class="side-panel" id="sidePanel">
+        <div class="side-panel-content">
+            <button class="close-panel" id="closePanel">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <h3>Explore</h3>
+            <a href="index.html" class="panel-item">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+            <a href="topics.html" class="panel-item active">
+                <i class="fas fa-compass"></i>
+                Browse Topics
+            </a>
+            <a href="authors.html" class="panel-item">
+                <i class="fas fa-user-circle"></i>
+                Authors
+            </a>
+            <a href="random.html" class="panel-item">
+                <i class="fas fa-random"></i>
+                Random Quote
+            </a>
+        </div>
+    </aside>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> / <a href="topics.html">Topics</a> / <span id="breadcrumbTopic">Loading...</span>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="topic-hero">
+        <div class="topic-hero-icon" id="topicIcon">📚</div>
+        <h1 id="topicTitle">Loading...</h1>
+        <p id="topicDescription">Loading topic description...</p>
+        <div class="topic-meta">
+            <span id="quoteCount">0 quotes</span>
+        </div>
+    </section>
+
+    <!-- Quotes List -->
+    <section class="quotes-list" id="quotesList">
+        <!-- Quotes will be loaded dynamically -->
+    </section>
+
+    <!-- Related Topics -->
+    <section class="related-topics">
+        <h2>Explore Related Topics</h2>
+        <div class="related-grid" id="relatedGrid">
+            <!-- Related topics will be loaded dynamically -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Wisdom Without Borders. Ancient wisdom for modern times.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/quotes-expanded.js"></script>
+    <script>
+        // Get topic from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const topicSlug = urlParams.get('topic');
+
+        // Topic data
+        const topicData = {
+            love: { icon: '❤️', title: 'Love & Compassion', description: 'Ancient wisdom on love, kindness, and human connection' },
+            wisdom: { icon: '📚', title: 'Wisdom & Learning', description: 'Timeless insights on knowledge, learning, and understanding' },
+            peace: { icon: '🕊️', title: 'Peace & Mindfulness', description: 'Finding inner peace and living in the present moment' },
+            strength: { icon: '💪', title: 'Strength & Resilience', description: 'Building inner strength and overcoming obstacles' },
+            selfControl: { icon: '🎯', title: 'Self-Control & Discipline', description: 'Mastering yourself and your reactions' },
+            truth: { icon: '⚖️', title: 'Truth & Integrity', description: 'Living honestly and with moral courage' },
+            humility: { icon: '🌱', title: 'Humility & Growth', description: 'The power of humility and continuous learning' },
+            gratitude: { icon: '🙏', title: 'Gratitude & Generosity', description: 'The joy of giving and being grateful' }
+        };
+
+        // Load topic page
+        function loadTopicPage() {
+            const topic = topicData[topicSlug];
+            if (!topic) {
+                window.location.href = 'topics.html';
+                return;
+            }
+
+            // Update meta tags
+            document.getElementById('pageTitle').textContent = `${topic.title} Quotes | Wisdom Without Borders`;
+            document.getElementById('metaDescription').setAttribute('content', `${topic.description}. Explore ${topic.title.toLowerCase()} quotes from ancient philosophers.`);
+
+            // Update hero section
+            document.getElementById('topicIcon').textContent = topic.icon;
+            document.getElementById('topicTitle').textContent = topic.title;
+            document.getElementById('topicDescription').textContent = topic.description;
+            document.getElementById('breadcrumbTopic').textContent = topic.title;
+
+            // Load quotes
+            const quotes = getQuotesByTopic(topicSlug);
+            document.getElementById('quoteCount').textContent = `${quotes.length} quotes`;
+
+            const quotesList = document.getElementById('quotesList');
+            quotesList.innerHTML = '';
+
+            quotes.forEach(quote => {
+                const quoteItem = document.createElement('div');
+                quoteItem.className = 'quote-item';
+                quoteItem.innerHTML = `
+                    <div class="quote-text">"${quote.translation}"</div>
+                    <div class="quote-author">— ${quote.authorName}</div>
+                    <div class="quote-explanation">
+                        <strong>Meaning:</strong> ${quote.explanation}
+                    </div>
+                    <div class="quote-modern">
+                        💡 Modern context: ${quote.modern}
+                    </div>
+                    <div class="quote-actions">
+                        <button class="quote-btn" onclick="shareQuote('${quote.id}')">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                        <button class="quote-btn" onclick="saveQuote('${quote.id}')">
+                            <i class="fas fa-bookmark"></i> Save
+                        </button>
+                        <a href="quote.html?id=${quote.id}" class="quote-btn">
+                            <i class="fas fa-external-link-alt"></i> View Full
+                        </a>
+                    </div>
+                `;
+                quotesList.appendChild(quoteItem);
+            });
+
+            // Load related topics
+            loadRelatedTopics();
+        }
+
+        // Load related topics
+        function loadRelatedTopics() {
+            const allTopics = Object.keys(topicData).filter(t => t !== topicSlug);
+            const related = allTopics.sort(() => Math.random() - 0.5).slice(0, 4);
+
+            const grid = document.getElementById('relatedGrid');
+            grid.innerHTML = '';
+
+            related.forEach(slug => {
+                const topic = topicData[slug];
+                const card = document.createElement('a');
+                card.href = `topic.html?topic=${slug}`;
+                card.className = 'related-card';
+                card.innerHTML = `
+                    <div class="related-icon">${topic.icon}</div>
+                    <div class="related-title">${topic.title}</div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Share quote (placeholder)
+        function shareQuote(quoteId) {
+            alert('Share functionality will be implemented with social media integration.');
+        }
+
+        // Save quote (placeholder)
+        function saveQuote(quoteId) {
+            alert('Save functionality will be implemented with user accounts.');
+        }
+
+        // Menu toggle
+        document.getElementById('menuToggle').addEventListener('click', () => {
+            document.getElementById('sidePanel').classList.add('active');
+        });
+
+        document.getElementById('closePanel').addEventListener('click', () => {
+            document.getElementById('sidePanel').classList.remove('active');
+        });
+
+        // Load page on load
+        loadTopicPage();
+    </script>
+
+</body>
+</html>

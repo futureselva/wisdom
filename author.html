@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" id="metaDescription" content="Explore quotes and teachings from this ancient philosopher.">
+    <meta name="keywords" id="metaKeywords" content="">
+
+    <title id="pageTitle">Author | Wisdom Without Borders</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:wght@600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .author-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px 60px;
+            text-align: center;
+            color: white;
+        }
+
+        .author-hero-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+
+        .author-hero h1 {
+            font-family: 'Fraunces', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+
+        .author-hero-period {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            margin-bottom: 16px;
+        }
+
+        .author-hero-tradition {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 24px;
+            border-radius: 24px;
+            font-size: 0.875rem;
+        }
+
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            font-size: 0.875rem;
+            color: #4a5568;
+        }
+
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .author-content {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .bio-section {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .bio-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+            color: #1a202c;
+        }
+
+        .bio-text {
+            color: #2d3748;
+            line-height: 1.8;
+            font-size: 1.125rem;
+        }
+
+        .quotes-section {
+            margin-top: 60px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            margin-bottom: 12px;
+            color: #1a202c;
+        }
+
+        .section-header p {
+            color: #4a5568;
+            font-size: 1.125rem;
+        }
+
+        .quotes-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        .quote-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .quote-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+
+        .quote-card-text {
+            font-family: 'Fraunces', serif;
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: #1a202c;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .quote-card-topics {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .topic-tag {
+            background: #f7fafc;
+            color: #667eea;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .quote-card-explanation {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            padding: 16px;
+            background: #f7fafc;
+            border-radius: 8px;
+        }
+
+        .quote-card-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .quote-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.875rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .quote-btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        .stats-section {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-family: 'Fraunces', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: #4a5568;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 768px) {
+            .author-hero h1 {
+                font-size: 2rem;
+            }
+
+            .bio-section {
+                padding: 24px;
+            }
+
+            .quote-card {
+                padding: 24px;
+            }
+
+            .quote-card-text {
+                font-size: 1.125rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit;">
+                    <svg width="32" height="32" viewBox="0 0 32 32">
+                        <circle cx="16" cy="16" r="15" fill="url(#navGradient)"/>
+                        <path d="M 10 13 Q 16 11 22 13 L 22 21 Q 16 19 10 21 Z" fill="white" opacity="0.9"/>
+                        <defs>
+                            <linearGradient id="navGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#667eea"/>
+                                <stop offset="100%" style="stop-color:#764ba2"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span>Wisdom</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Side Panel -->
+    <aside class="side-panel" id="sidePanel">
+        <div class="side-panel-content">
+            <button class="close-panel" id="closePanel">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <h3>Explore</h3>
+            <a href="index.html" class="panel-item">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+            <a href="topics.html" class="panel-item">
+                <i class="fas fa-compass"></i>
+                Browse Topics
+            </a>
+            <a href="authors.html" class="panel-item active">
+                <i class="fas fa-user-circle"></i>
+                Authors
+            </a>
+            <a href="random.html" class="panel-item">
+                <i class="fas fa-random"></i>
+                Random Quote
+            </a>
+        </div>
+    </aside>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> / <a href="authors.html">Authors</a> / <span id="breadcrumbAuthor">Loading...</span>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="author-hero">
+        <div class="author-hero-icon" id="authorIcon">📜</div>
+        <h1 id="authorName">Loading...</h1>
+        <p class="author-hero-period" id="authorPeriod">Period</p>
+        <span class="author-hero-tradition" id="authorTradition">Tradition</span>
+    </section>
+
+    <!-- Content -->
+    <div class="author-content">
+
+        <!-- Stats -->
+        <div class="stats-section">
+            <div class="stat-item">
+                <div class="stat-number" id="quoteCount">0</div>
+                <div class="stat-label">Quotes</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="topicCount">8</div>
+                <div class="stat-label">Topics</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="yearCount">2000+</div>
+                <div class="stat-label">Years Old</div>
+            </div>
+        </div>
+
+        <!-- Bio -->
+        <div class="bio-section">
+            <h2 class="bio-title">About <span id="authorNameBio"></span></h2>
+            <p class="bio-text" id="authorBio"></p>
+        </div>
+
+        <!-- Quotes -->
+        <div class="quotes-section">
+            <div class="section-header">
+                <h2>Complete Collection</h2>
+                <p>All wisdom from <span id="authorNameQuotes"></span></p>
+            </div>
+            <div class="quotes-grid" id="quotesGrid">
+                <!-- Quotes will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Wisdom Without Borders. Ancient wisdom for modern times.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/quotes-expanded.js"></script>
+    <script>
+        // Get author from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const authorKey = urlParams.get('author');
+
+        const authorIcons = {
+            thiruvalluvar: '📜',
+            rumi: '🌙',
+            buddha: '☸️',
+            confucius: '🏛️',
+            marcusAurelius: '🏺',
+            laoTzu: '☯️'
+        };
+
+        // Load author page
+        function loadAuthorPage() {
+            const authorData = getQuotesByAuthor(authorKey);
+
+            if (!authorData) {
+                window.location.href = 'authors.html';
+                return;
+            }
+
+            // Update meta
+            document.getElementById('pageTitle').textContent = `${authorData.author} Quotes & Teachings | Wisdom Without Borders`;
+            document.getElementById('metaDescription').setAttribute('content', authorData.bio);
+
+            // Update hero
+            document.getElementById('authorIcon').textContent = authorIcons[authorKey];
+            document.getElementById('authorName').textContent = authorData.author;
+            document.getElementById('authorPeriod').textContent = authorData.period;
+            document.getElementById('authorTradition').textContent = authorData.tradition;
+            document.getElementById('breadcrumbAuthor').textContent = authorData.author;
+
+            // Update stats
+            document.getElementById('quoteCount').textContent = authorData.quotes.length;
+
+            // Calculate years (rough estimate)
+            const periodMatch = authorData.period.match(/(\d+)/);
+            const years = periodMatch ? 2026 - parseInt(periodMatch[0]) : 2000;
+            document.getElementById('yearCount').textContent = years > 1000 ? '2000+' : years + '+';
+
+            // Update bio
+            document.getElementById('authorNameBio').textContent = authorData.author;
+            document.getElementById('authorBio').textContent = authorData.bio;
+
+            // Update quotes section
+            document.getElementById('authorNameQuotes').textContent = authorData.author;
+
+            // Load quotes
+            const grid = document.getElementById('quotesGrid');
+            grid.innerHTML = '';
+
+            authorData.quotes.forEach(quote => {
+                const card = document.createElement('div');
+                card.className = 'quote-card';
+                card.innerHTML = `
+                    <div class="quote-card-text">"${quote.translation}"</div>
+                    <div class="quote-card-topics">
+                        ${quote.topic.map(t => `<span class="topic-tag">#${t}</span>`).join('')}
+                    </div>
+                    <div class="quote-card-explanation">${quote.explanation}</div>
+                    <div class="quote-card-actions">
+                        <a href="quote.html?id=${quote.id}" class="quote-btn">
+                            <i class="fas fa-external-link-alt"></i> Read More
+                        </a>
+                        <button class="quote-btn" onclick="shareQuote('${quote.id}')">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Share quote (placeholder)
+        function shareQuote(quoteId) {
+            const quote = getQuoteById(quoteId);
+            const text = `"${quote.translation}" — ${quote.authorName}`;
+            if (navigator.share) {
+                navigator.share({ title: 'Ancient Wisdom', text: text, url: `${window.location.origin}/quote.html?id=${quoteId}` });
+            } else {
+                alert('Share functionality will be enhanced with social media integration.');
+            }
+        }
+
+        // Menu toggle
+        document.getElementById('menuToggle').addEventListener('click', () => {
+            document.getElementById('sidePanel').classList.add('active');
+        });
+
+        document.getElementById('closePanel').addEventListener('click', () => {
+            document.getElementById('sidePanel').classList.remove('active');
+        });
+
+        // Load page
+        loadAuthorPage();
+    </script>
+
+</body>
+</html>
